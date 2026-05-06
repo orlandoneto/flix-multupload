@@ -1,0 +1,35 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Global rules for all crawlers
+User-agent: *
+
+# Allow crawling of the site
+Allow: /
+
+# Block non-public and system paths
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /staging/
+
+# Note: do not block JS and CSS. Search engines need them to render the site.
+
+# Optional: block checkout from crawling (page already uses noindex)
+Disallow: /checkout
+
+# Sitemap location
+Sitemap: https://flixdesign.com.br/sitemap.xml
+
+# Image crawler rules
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Disallow: /assets/images/private/
+
+# Crawl delays (optional)
+User-agent: Bingbot
+Crawl-delay: 3
+
+User-agent: Googlebot
+Crawl-delay: 2

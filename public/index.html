@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="https://flixdesign.com.br/" />
+
+  <script>
+    (function () {
+      try {
+        var h = window.location.hostname;
+        if (h === 'www.flixdesign.com.br') {
+          var target = 'https://flixdesign.com.br' + window.location.pathname + window.location.search + window.location.hash;
+          window.location.replace(target);
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5HF2H9TM');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Favicons para todos os navegadores e dispositivos -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favflix.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favflix.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favflix.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favflix.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favflix.png">
+
+  <!-- Manifest para PWA -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- SEO -->
+  <title> Flixdesign - Sua galeria de design</title>
+  <meta name="description"
+    content=" Flixdesign: Plataforma para designers compartilharem, atualizarem e exibirem seus trabalhos em uma galeria moderna." />
+  <meta name="keywords"
+    content="design, galeria, portfólio, imagens, designers, arte, criatividade, recursos gráficos, PSD" />
+  <meta name="author" content=" Flixdesign" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content=" Flixdesign - Sua galeria de design" />
+  <meta property="og:description" content="Compartilhe e atualize seus trabalhos de design em uma galeria moderna." />
+  <meta property="og:image" content="/favflix.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flixdesign.com.br/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content=" Flixdesign - Sua galeria de design" />
+  <meta name="twitter:description" content="Compartilhe e atualize seus trabalhos de design em uma galeria moderna." />
+  <meta name="twitter:image" content="/favflix.png" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HF2H9TM" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript>Você precisa habilitar o JavaScript para rodar este app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

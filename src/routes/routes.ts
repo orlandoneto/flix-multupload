@@ -1,0 +1,15 @@
+export const Routes = {
+  HOME: '/',
+  LOGIN: '/login',
+  REGISTER: '/register',
+  PLANS: '/plans',
+  DOWNLOAD: '/download/:itemId',
+  DOWNLOAD_FREE: '/download-free/:itemId',
+  RESULT_SEARCH: '/result/search',
+  VALID_CODE: '/valid-code',
+  CHECKOUT: '/checkout',
+  PROFILE: '/profile',
+  RESET_PASSWORD: '/reset-password',
+  RECOVER_PASSWORD: '/recover-password',
+  GO_BACK: -1,
+};

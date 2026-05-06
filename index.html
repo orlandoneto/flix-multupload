@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" href="/favicon.ico" sizes="any"> -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <link rel="apple-touch-icon" href="/favflix.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flix Design - Encontre os melhores PSD's e recursos gráficos por um preço acessível</title>
+  <!-- Preload styled-components -->
+  <link rel="modulepreload" href="/node_modules/styled-components/dist/styled-components.esm.js" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5HF2H9TM');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ3ZE1525N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XZ3ZE1525N');
+  </script>
+  <!-- SPA page_view tracking for GA4 -->
+  <script>
+    (function () {
+      var GA_ID = 'G-XZ3ZE1525N';
+      function track() {
+        if (typeof gtag === 'function') {
+          gtag('config', GA_ID, { page_path: location.pathname + location.search + location.hash });
+        }
+      }
+      var pushState = history.pushState;
+      var replaceState = history.replaceState;
+      history.pushState = function () { pushState.apply(this, arguments); track(); };
+      history.replaceState = function () { replaceState.apply(this, arguments); track(); };
+      window.addEventListener('popstate', track);
+      window.addEventListener('load', track);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HF2H9TM" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

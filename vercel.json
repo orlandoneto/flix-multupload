@@ -1,0 +1,15 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "https://flixdesign.com.br/:path*",
+            "destination": "https://flixdesign.com.br/:path*",
+            "permanent": true
+        }
+    ]
+}

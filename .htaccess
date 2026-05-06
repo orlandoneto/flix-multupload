@@ -1,0 +1,60 @@
+# Ativa o mod_rewrite
+RewriteEngine On
+
+# ================================
+# 🔀 Redireciona www → sem www
+# ================================
+RewriteCond %{HTTP_HOST} ^www\.flixdesign\.com\.br$ [NC]
+RewriteRule ^(.*)$ https://flixdesign.com.br/$1 [L,R=301]
+
+# ================================
+# 🚫 Proteção contra hotlink de imagens
+# ================================
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?flixdesign\.com\.br/.*$ [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|avif|svg)$ - [F,NC,L]
+
+# ================================
+# 🚫 Bloqueia acesso direto a imagens na pasta /images/protected
+# ================================
+RewriteRule ^images/protected/.* - [F,L]
+
+# ================================
+# 🚫 Impede listagem de diretórios
+# ================================
+Options -Indexes
+
+# ================================
+# 🚫 Forçar atualização do index.html (sem cache)
+# ================================
+<FilesMatch "index\.html$">
+    FileETag None
+    <IfModule mod_headers.c>
+        Header unset ETag
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </IfModule>
+</FilesMatch>
+
+# ================================
+# ⚛️ Suporte para SPA (React, Vue, Angular, etc.)
+# Se o arquivo ou diretório não existir, redireciona para index.html
+# ================================
+<IfModule mod_rewrite.c>
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ================================
+# 🔒 Proteção adicional para arquivos específicos
+# Permite acesso apenas se o referer for do seu site
+# (Apache 2.4+)
+# ================================
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf|docx)$">
+  SetEnvIf Referer "^https://flixdesign\.com\.br" local_referer
+  Require all denied
+  Require env local_referer
+</FilesMatch>
