@@ -7,6 +7,10 @@
 
 Modern multi-upload platform for creative assets, with web and desktop (Electron) support.
 
+<p align="center">
+  <img src="./src/assets/svg/logo.svg" alt="Flix Multupload logo" width="220" />
+</p>
+
 ## Language / Idioma
 - [English](#english)
 - [Portugues](#portugues)
